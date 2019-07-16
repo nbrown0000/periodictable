@@ -16,6 +16,7 @@ const PeriodicTable = ({list}) => {
             xPos={item.xpos}
             yPos={item.ypos}
             category={item.category}
+            mass={item.atomic_mass}
           />
         )
       })}

@@ -10,5 +10,5 @@ html {
 }
 
 .element > * {
-  margin: 2px;
+  margin: 0px 2px 0px 2px;
 }
