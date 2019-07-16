@@ -1,0 +1,14 @@
+html {
+  box-sizing: border-box;
+}
+
+.element {
+  width: 80px;
+  height: 80px;
+  border: 1px solid black;
+  font-size: 0.8em;
+}
+
+.element > * {
+  margin: 2px;
+}
