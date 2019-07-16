@@ -1,20 +1,23 @@
 import React from 'react';
 import './Element.css'
 
-const Element = () => {
-  const hydrogen = {
-    atomic_number: 1,
-    symbol: 'H',
-    name: 'Hydrogen',
-    atomic_mass: 1.008
+const Element = ({number, name, symbol, xPos, yPos, category}) => {
+  
+  const divStyle = {
+    gridColumnStart: `${xPos}`,
+    gridRowStart: `${yPos}`
+  };
+
+  const pStyle = {
+    'fontSize': '.7em'
   }
 
   return (
-    <div className='element'>
-      <p>{hydrogen.atomic_number}</p>
-      <h2>{hydrogen.symbol}</h2>
-      <p>{hydrogen.name}</p>
-      <p>{hydrogen.atomic_mass}</p>
+    <div className='element' style={divStyle}>
+      <p>{number}</p>
+      <h2>{symbol}</h2>
+      <p style={pStyle}>{name}</p>
+      {/* <p>{hydrogen.atomic_mass}</p> */}
     </div>
   )
 }

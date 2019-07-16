@@ -1,16 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
 import PeriodicTable from './PeriodicTable';
 import 'tachyons';
+import { elements } from './AllElements';
 
-function App() {
-  return (
-    <div>
-      <h1>Periodic Table of Elements</h1>
-      <PeriodicTable/>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      elementsList: []
+    }
+  }
+
+  componentDidMount() {
+    this.setState({elementsList: elements})
+  }
+
+  render() {
+    console.log(this.state.elementsList)
+
+    return (
+      <div className='container'>
+        <h1>Periodic Table of Elements</h1>
+        <PeriodicTable list={this.state.elementsList}/>
+      </div>
+    );
+  }
 }
 
 export default App;

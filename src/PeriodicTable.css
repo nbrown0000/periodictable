@@ -1,0 +1,5 @@
+.period-table {
+  display: grid;
+  grid-template-columns: repeat(18, 60px);
+  grid-template-rows: repeat(9, 60px);
+}
