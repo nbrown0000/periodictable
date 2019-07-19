@@ -1,7 +1,7 @@
 import React from 'react';
 import './Element.css'
 
-const Element = ({number, name, symbol, xPos, yPos, category, mass}) => {
+function getBackground(category) {
   let elementBackground;
   switch(category) {
     case 'diatomic nonmetal':
@@ -38,6 +38,11 @@ const Element = ({number, name, symbol, xPos, yPos, category, mass}) => {
       elementBackground = '#e3e3e3';
       break;
   }
+  return elementBackground;
+}
+
+const Element = ({number, name, symbol, xPos, yPos, category, mass, hoverFunction}) => {
+  const elementBackground = getBackground(category);
 
   const divStyle = {
     'fontSize': '.7em',
@@ -51,7 +56,7 @@ const Element = ({number, name, symbol, xPos, yPos, category, mass}) => {
   }
 
   return (
-    <div className='element' style={divStyle}>
+    <div className='element' style={divStyle} onMouseEnter={hoverFunction}>
       <p>{number}</p>
       <h2>{symbol}</h2>
       <p style={pStyle}>{name}</p>

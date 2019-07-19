@@ -8,8 +8,13 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      elementsList: []
+      elementsList: [],
+      cardFace: {}
     }
+  }
+
+  onHover = (event) => {
+    this.setState({cardFace: event})
   }
 
   componentDidMount() {
@@ -17,12 +22,15 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.elementsList)
 
     return (
       <div className='container'>
         <h1>Periodic Table of Elements</h1>
-        <PeriodicTable list={this.state.elementsList}/>
+        <PeriodicTable
+          list={this.state.elementsList}
+          hover={this.onHover}
+          cardElement={this.state.cardFace}
+        />
       </div>
     );
   }
