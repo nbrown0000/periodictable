@@ -3,7 +3,6 @@ import './Key.css';
 import Card from './Card';
 
 const Key = ({card}) => {
-
   return (
     <div id='key'>
       <Card
@@ -13,6 +12,7 @@ const Key = ({card}) => {
         symbol={card.symbol}
         mass={card.atomic_mass}
         category={card.category}
+        shells={card.shells}
       />
     </div>
   )

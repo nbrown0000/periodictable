@@ -13,7 +13,7 @@ class App extends Component {
     }
   }
 
-  onHover = (event) => {
+  onHoverElement = (event) => {
     this.setState({cardFace: event})
   }
 
@@ -29,7 +29,7 @@ class App extends Component {
         <h1>Periodic Table of Elements</h1>
         <PeriodicTable
           list={this.state.elementsList}
-          hover={this.onHover}
+          hoverElement={this.onHoverElement}
           cardElement={this.state.cardFace}
         />
       </div>

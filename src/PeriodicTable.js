@@ -5,7 +5,7 @@ import Key from './Key';
 import Border from './Border';
 import BorderElement from './BorderElement';
 
-const PeriodicTable = ({list, hover, cardElement}) => {
+const PeriodicTable = ({list, hoverElement, cardElement}) => {
   // console.log({cardElement})
 
   let borderElements = [];
@@ -22,13 +22,12 @@ const PeriodicTable = ({list, hover, cardElement}) => {
 
   return (
     <div className='period-table'>
-      {/* <Border/> */}
       {borderElements}
       <Key card={cardElement}/>
       {list.map((item,i) => {
         return (
           <Element
-            hoverFunction={() => hover(list[i])}
+            hoverFunction={() => hoverElement(list[i])}
             key={i}
             number={item.number}
             name={item.name}
