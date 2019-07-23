@@ -12,6 +12,7 @@ const Key = ({card}) => {
         name={card.name}
         symbol={card.symbol}
         mass={card.atomic_mass}
+        category={card.category}
       />
     </div>
   )

@@ -1,9 +1,9 @@
 #key {
   border: 1px solid black;
   margin: 20px;
-  padding: 5px;
-  grid-column-start: 3;
-  grid-column-end: 6;
-  grid-row-start: 1;
-  grid-row-end: 4;
+  /* padding: 5px; */
+  grid-column-start: 4;
+  grid-column-end: 7;
+  grid-row-start: 2;
+  grid-row-end: 5;
 }
