@@ -1,17 +1,16 @@
 import React from 'react';
 import Element from './Element';
-import './PeriodicTable.css';
+import './ComponentStyles.css';
 import Key from './Key';
-import Border from './Border';
 import BorderElement from './BorderElement';
 
-const PeriodicTable = ({list, hoverElement, cardElement}) => {
+const PeriodicTable = ({list = [], hoverElement, cardElement}) => {
   // console.log({cardElement})
 
   let borderElements = [];
   for(let i=1; i<=18; i++) {
     borderElements.push(
-      <BorderElement key={i} xPos={i} yPos={0} name={i}/>
+      <BorderElement key={i} xPos={i} yPos={0} name={i} onHover={function(){console.log('this')}}/>
     )
   }
   for(let j=1; j<=7; j++) {
@@ -21,7 +20,7 @@ const PeriodicTable = ({list, hoverElement, cardElement}) => {
   }
 
   return (
-    <div className='period-table'>
+    <div id='period-table'>
       {borderElements}
       <Key card={cardElement}/>
       {list.map((item,i) => {

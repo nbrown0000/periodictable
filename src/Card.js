@@ -1,24 +1,26 @@
 import React from 'react';
-import './Card.css';
+import './ComponentStyles.css';
 import {getBackground} from './Util';
 
 const Card = ({ number, name, symbol, mass, category, shells=[] }) => {
   const cardStyle = {
-    backgroundColor: `${getBackground(category)}`,
+    gridColumnStart: 1,
+    gridColumnEnd: 3,
+    gridRowStart: 2,
+    gridRowEnd: 4,
+    backgroundColor: `${getBackground(category)}`
   };
-
-  console.log(shells);
 
   return(
     <div className='card-container' style={cardStyle}>
-      <div className='card left'>
+      <div key='1' className='card left'>
         <h3>{number}</h3>
         <h2>{symbol}</h2>
         <p>{name}</p>
         <p>{mass}</p>
       </div>
       
-      <div className='card right'>
+      <div key='2' className='card right'>
         {shells.map((item) => {
           return(
             <p>{item}</p>
