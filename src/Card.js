@@ -4,10 +4,6 @@ import {getBackground} from './Util';
 
 const Card = ({ number, name, symbol, mass, category, shells=[] }) => {
   const cardStyle = {
-    gridColumnStart: 1,
-    gridColumnEnd: 3,
-    gridRowStart: 2,
-    gridRowEnd: 4,
     backgroundColor: `${getBackground(category)}`
   };
 

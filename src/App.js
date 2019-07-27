@@ -22,7 +22,7 @@ class App extends Component {
   }
 
   render() {
-    // console.log(this.state.elementsList)
+    console.log(this.state.elementsList)
 
     return (
       <div className='container'>

@@ -1,5 +1,23 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+
 #period-table {
-  /* border: 1px solid black; */
   border-radius: 5px;
   background-color: whitesmoke;
   padding: 30px;
@@ -9,9 +27,27 @@
   grid-gap: 4px;
 }
 
+.element {
+  width: 60px;
+  height: 60px;
+  font-size: 0.7em;
+  border-radius: 3px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: black;
+}
+
+.element:hover {
+  filter: brightness(80%);
+}
+
+.element > * {
+  margin: 0px 2px 0px 2px;
+}
+
 #key {
-  /* margin: 20px; */
-  /* padding: 5px; */
   grid-column-start: 4;
   grid-column-end: 14;
   grid-row-start: 2;
@@ -20,7 +56,6 @@
   grid-template-columns: repeat(10, 60px);
   grid-template-rows: repeat(3, 60px);
   grid-gap: 4px;
-  /* background-color: aqua; */
 }
 
 #key-title {
@@ -61,7 +96,7 @@
 /* CARD COMPONENT START */
 .card-container {
   grid-column-start: 1;
-  grid-column-end: 7;
+  grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 4;
 
@@ -99,3 +134,10 @@
   font-weight: 100;
 }
 /* CARD COMPONENT END */
+
+/* .borderElement { 
+} */
+
+.borderElement > * {
+  margin: auto;
+}

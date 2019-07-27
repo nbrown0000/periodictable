@@ -1,5 +1,5 @@
 import React from 'react';
-import './BorderElement.css'
+import './ComponentStyles.css';
 
 
 const BorderElement = ({name, xPos, yPos}) => {

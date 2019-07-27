@@ -10,7 +10,7 @@ const PeriodicTable = ({list = [], hoverElement, cardElement}) => {
   let borderElements = [];
   for(let i=1; i<=18; i++) {
     borderElements.push(
-      <BorderElement key={i} xPos={i} yPos={0} name={i} onHover={function(){console.log('this')}}/>
+      <BorderElement key={i} xPos={i} yPos={0} name={i}/>
     )
   }
   for(let j=1; j<=7; j++) {
@@ -34,7 +34,7 @@ const PeriodicTable = ({list = [], hoverElement, cardElement}) => {
             xPos={item.xpos}
             yPos={item.ypos}
             category={item.category}
-            mass={item.atomic_mass}
+            link={item.source}
           />
         )
       })}
