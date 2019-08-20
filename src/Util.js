@@ -1,38 +1,39 @@
 export function getBackground(category) {
+  const fade = 0.9;
   let elementBackground;
   switch(category) {
     case 'diatomic nonmetal':
-      elementBackground = '#f1ff90';
+      elementBackground = `rgba(255, 220, 0, ${fade})`
       break;
     case 'noble gas':
-      elementBackground = '#c0ffff';
+      elementBackground = `rgba(255, 133, 27, ${fade})`
       break;
     case 'alkali metal':
-      elementBackground = '#ff6666';
+      elementBackground = `rgba(255, 65, 54, ${fade})`
       break;
     case 'metalloid':
-      elementBackground = '#CCCC99';
+      elementBackground = `rgba(61, 153, 112, ${fade})`
       break;
     case 'alkaline earth metal':
-      elementBackground = '#ffdead';
+      elementBackground = `rgba(200, 59, 222, ${fade})`
       break;
     case 'polyatomic nonmetal':
-      elementBackground = '#F0FF8F';
+      elementBackground = `rgba(255, 220, 0, ${fade})`
       break;
     case 'post-transition metal':
-      elementBackground = '#C3C4C4';
+      elementBackground = `rgba(46, 204, 64, ${fade})`
       break;
     case 'transition metal':
-      elementBackground = '#FFC0C0';
+      elementBackground = `rgba(0, 116, 217, ${fade})`
       break;
     case 'lanthanide':
-      elementBackground = '#FFBFFF';
+      elementBackground = `rgba(127, 219, 255, ${fade})`
       break;
     case 'actinide':
-      elementBackground = '#FF99CC';
+      elementBackground = `rgba(57, 204, 204, ${fade})`
       break;
     default:
-      elementBackground = '#E8E8E8';
+      elementBackground = `rgba(170, 170, 170, ${fade})`
       break;
   }
   return elementBackground;
