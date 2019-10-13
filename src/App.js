@@ -30,25 +30,23 @@ class App extends Component {
   legendButtonClicked = event => {
     // console.log(event.title)
     // console.log(event.content)
-    console.log()
 
     this.setState({mode: 'legend'})
-    this.setState({legendInfo: {
-      title: event.title,
-      content: event.content,
-    }})
 
     if(event==='clear') {
       this.resetColours();
       this.setState({mode: 'default'})
     }
 
-    var TYPE
-    var INDEX
+    var TYPE;
+    var INDEX;
     if(event !== 'clear') {
       TYPE = event.title.split(" ")[0];
       INDEX = parseInt(event.title.split(" ")[1],10);
     }
+
+    console.log(`TYPE: ${TYPE}`)
+    console.log(`INDEX: ${INDEX}`)
 
     if(TYPE==='Group') {
       this.resetColours()
@@ -56,11 +54,39 @@ class App extends Component {
         if(el.xpos!==INDEX || el.category==='lanthanide' || el.category==='actinide') el.color='lightgray'
         return el;
       })})
-      this.setState({legendInfo: {
-        title: event.title,
-        content: event.content
-      }})
     }
+
+    if(TYPE==='Period') {
+      this.resetColours()
+      this.setState({elementsList: this.state.elementsList.map(el => {
+        if(el.ypos!==INDEX) el.color='lightgray'
+        if(INDEX===6 && el.ypos==9) el.color=getBackground(el.category)
+        if(INDEX===7 && el.ypos==10) el.color=getBackground(el.category)
+        return el;
+      })})
+      
+    }
+
+    if(TYPE==='Lanthanides') {
+      this.resetColours()
+      this.setState({elementsList: this.state.elementsList.map(el => {
+        if(el.category!=='lanthanide') el.color='lightgray'
+        return el;
+      })})
+    }
+
+    if(TYPE==='Actinides') {
+      this.resetColours()
+      this.setState({elementsList: this.state.elementsList.map(el => {
+        if(el.category!=='actinide') el.color='lightgray'
+        return el;
+      })})
+    }
+
+    this.setState({legendInfo: {
+      title: event.title,
+      content: event.content
+    }})
 
     // if(event[0]==='Period') {
     //   this.resetColours()
@@ -97,7 +123,7 @@ class App extends Component {
     // console.log(this.state.legendInfo)
     // console.log(`MODE: ${this.state.mode}`);
     // console.log(this.state.selected);
-    // console.log(this.state.elementsList)
+    console.log(this.state.elementsList)
 
 
     return (

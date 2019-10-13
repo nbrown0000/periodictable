@@ -125,8 +125,41 @@ export function getLegendData(type, value) {
     switch(value) {
       case '1':
         data.title = 'Period 1';
-        data.content = ``;
+        data.content = `The first period contains two elements: hydrogen and helium. These are both colourless gases. They have electrons in the first electron shell only, in an s orbital. Helium is usually placed in group 18 with the noble gases. Hydrogen behaves very differently from elements in the lower periods and so scientists disagree over whether it should belong to group 1 or 17.`;
         break;
+      case '2':
+        data.title = 'Period 2';
+        data.content = `The second period contains eight elements (six more elements than the first period). This is because across this period electrons fill the second electron shell, which has both s and p orbitals. Elements in this period typically follow the so-called ‘octet rule’. This means that these elements tend to form compounds in which each atom has eight electrons in its outer electron shell.`;
+        break;
+      case '3':
+        data.title = 'Period 3';
+        data.content = `The third period contains eight elements. This is because across this period electrons fill the third electron shell, which has both s and p orbitals. Elements in this period typically follow the so-called 'octet rule'. This means that these elements tend to form compounds in which each atom has eight electrons in its outer electron shell.`;
+        break;
+      case '4':
+        data.title = 'Period 4';
+        data.content = `The fourth period contains 18 elements. The elements in this period have valence electrons in the 4s, 3d and 4p orbitals. The 'octet rule', which applied to the second and third periods, does not apply here because of the introduction of the d sub-shell.`;
+        break;
+      case '5':
+        data.title = 'Period 5';
+        data.content = `The fifth period contains 18 elements. The elements in this period have valence electrons in the 5s, 4d and 5p orbitals.`;
+        break;
+      case '6':
+        data.title = 'Period 6';
+        data.content = `The sixth period contains 32 elements, and includes the lanthanides. The elements in this period have valence electrons in the 6s, 4f, 5d and 6p orbitals. This period contains lead, which is the heaviest stable element in the periodic table.`;
+        break;
+      case '7':
+        data.title = 'Period 7';
+        data.content = `The seventh period contains 32 elements, and includes the actinides. The elements in this period have valence electrons in the 7s, 5f, 6d and 7p orbitals. This period ends with oganesson which is the heaviest element for which discovery has been claimed.`;
+        break;
+      case '9':
+        data.title = 'Lanthanides';
+        data.content = `The lanthanides are often called the rare earth elements. They actually sit in the sixth period between barium and hafnium. They are usually shown as a separate row below the rest of the periodic table to make it easier to display the whole table. The lanthanides most commonly form cations with a +3 charge.`;
+        break;
+      case '10':
+        data.title = 'Actinides';
+        data.content = `The actinides actually sit in the seventh period between radium and rutherfordium. They are usually shown as a separate row below the rest of the periodic table to make it easier to display the whole table. The actinides include plutonium, which is the heaviest naturally occurring element.`;
+        break;
+      default: break;
     }
   }
   

@@ -37,15 +37,15 @@ const Legend = ({clicked}) => {
 
       <div id='periods' className='legend-section'>
         <label>Periods</label>
-        <input type='button' value='1' onClick={() => clicked(['Period',1])}/>
-        <input type='button' value='2' onClick={() => clicked(['Period',2])}/>
-        <input type='button' value='3' onClick={() => clicked(['Period',3])}/>
-        <input type='button' value='4' onClick={() => clicked(['Period',4])}/>
-        <input type='button' value='5' onClick={() => clicked(['Period',5])}/>
-        <input type='button' value='6' onClick={() => clicked(['Period',6])}/>
-        <input type='button' value='7' onClick={() => clicked(['Period',7])}/>
-        <input type='button' value='lathanides' onClick={() => clicked(['Period',9])}/>
-        <input type='button' value='actinides' onClick={() => clicked(['Period',10])}/>
+        <input type='button' value='1' onClick={() => clicked(getLegendData('Period','1'))}/>
+        <input type='button' value='2' onClick={() => clicked(getLegendData('Period','2'))}/>
+        <input type='button' value='3' onClick={() => clicked(getLegendData('Period','3'))}/>
+        <input type='button' value='4' onClick={() => clicked(getLegendData('Period','4'))}/>
+        <input type='button' value='5' onClick={() => clicked(getLegendData('Period','5'))}/>
+        <input type='button' value='6' onClick={() => clicked(getLegendData('Period','6'))}/>
+        <input type='button' value='7' onClick={() => clicked(getLegendData('Period','7'))}/>
+        <input type='button' value='Lanthanides' onClick={() => clicked(getLegendData('Period','9'))}/>
+        <input type='button' value='Actinides' onClick={() => clicked(getLegendData('Period','10'))}/>
       </div>
 
       <div id='classification' className='legend-section'>

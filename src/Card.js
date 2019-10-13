@@ -65,6 +65,11 @@ const Card = ({ mode, selected, legendInfo }) => {
       {legendInfo.content}
     </p>
   </div>;
+  } else {
+    legendCard =
+    <div>
+      SOMETHING WENT WRONG
+    </div>
   }
 
 
