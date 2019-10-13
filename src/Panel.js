@@ -64,7 +64,7 @@ const Panel = ({panelButton}) => {
 
         <div className='set'>
           <label>Periods:</label>
-          <button onClick={() => this.panelButton(['period','1'])}>1</button>
+          <button onClick={() => panelButton(['period',1])}>1</button>
           <button>2</button>
           <button>3</button>
           <button>4</button>
