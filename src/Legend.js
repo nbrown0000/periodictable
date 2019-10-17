@@ -29,10 +29,10 @@ const Legend = ({clicked}) => {
 
       <div id='blocks' className='legend-section'>
         <label>Blocks</label>
-        <input type='button' value='s' onClick={() => clicked(['Block',1])}/>
-        <input type='button' value='p' onClick={() => clicked(['Block',2])}/>
-        <input type='button' value='d' onClick={() => clicked(['Block',3])}/>
-        <input type='button' value='f' onClick={() => clicked(['Block',4])}/>
+        <input type='button' value='s' onClick={() => clicked(getLegendData('Block','s'))}/>
+        <input type='button' value='p' onClick={() => clicked(getLegendData('Block','p'))}/>
+        <input type='button' value='d' onClick={() => clicked(getLegendData('Block','d'))}/>
+        <input type='button' value='f' onClick={() => clicked(getLegendData('Block','f'))}/>
       </div>
 
       <div id='periods' className='legend-section'>
@@ -50,9 +50,9 @@ const Legend = ({clicked}) => {
 
       <div id='classification' className='legend-section'>
         <label>Classification</label>
-        <input type='button' value='Metal'/>
-        <input type='button' value='Non-Metal'/>
-        <input type='button' value='Clear filters' onClick={() => clicked('clear')}/>
+        <input type='button' value='Metals' onClick={() => clicked(getLegendData('Metals','1'))}/>
+        <input type='button' value='Non-Metals' onClick={() => clicked(getLegendData('Non-Metals','1'))}/>
+        <input type='button' value='Clear filters' onClick={() => clicked(getLegendData('clear','0'))}/>
       </div>
 
     </div>

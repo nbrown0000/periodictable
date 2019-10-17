@@ -43,6 +43,21 @@ export function getBackground(category) {
 export function getLegendData(type, value) {
   const data = {}
 
+  if(type==='clear') {
+    data.title = 'clear';
+    data.content = '';
+  }
+
+  if(type==='Metals') {
+    data.title = 'Metals';
+    data.content = `Metals are generally shiny, malleable elements that conduct heat and electricity well. Most are solid at room temperature. In reactions metals tend to form positive ions. Metalloids have properties that are in between those of metals and non-metals. (Metalloids represented by dashed border)`
+  }
+
+  if(type==='Non-Metals') {
+    data.title = 'Non-Metals';
+    data.content = 'Non-metallic elements have more varied properties than metals. They are poor conductors of heat and electricity and in reactions they commonly form negative ions. Metalloids have properties that are in between those of metals and non-metals.'
+  }
+
   if(type==='Group') {
     switch(value) {
       case '1':
@@ -159,6 +174,32 @@ export function getLegendData(type, value) {
         data.title = 'Actinides';
         data.content = `The actinides actually sit in the seventh period between radium and rutherfordium. They are usually shown as a separate row below the rest of the periodic table to make it easier to display the whole table. The actinides include plutonium, which is the heaviest naturally occurring element.`;
         break;
+      default: break;
+    }
+  }
+
+  if(type==='Block') {
+    switch(value) {
+      case 's':
+        data.title = 'S Block';
+        data.content = `The s block includes the alkali metals and alkaline earth metals. These are soft and reactive metals. The s block also contains hydrogen and helium, which are non-metals and gases. The elements of the s block have their valence electrons in s orbitals. The s sub-shell can contain a maximum of two electrons. This explains why the block is two columns wide.`;
+        break;
+      
+      case 'p':
+        data.title = 'P Block';
+        data.content = `The p block consists of elements with quite varied properties. It contains non-metals, metalloids and metals. Metalloids are elements with properties that are in between those of metals and non-metals. The p sub-shell can hold a maximum of six electrons, in three distinct orbitals.`;
+        break;
+      
+      case 'd':
+        data.title = 'D Block';
+        data.content = `The d block is also commonly known as the 'transition metals'. It contains metals that are typically hard and dense, and good conductors of heat and electricity. They are less reactive than the s-block metals, and they often form coloured compounds. The d sub-shell can hold a maximum of ten electrons, in five distinct orbitals.`
+        break;
+
+      case 'f':
+        data.title = 'F Block';
+        data.content = `The f block consists of the lanthanides and actinides. These are all soft metals and many are radioactive. Most of the lanthanides can be found naturally on Earth, but the actinides are typically made in nuclear reactors and not found in nature. The f sub-shell can contain up to 14 electrons, in seven distinct orbitals.`
+        break;
+
       default: break;
     }
   }
