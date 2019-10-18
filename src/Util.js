@@ -182,7 +182,7 @@ export function getLegendData(type, value) {
     switch(value) {
       case 's':
         data.title = 'S Block';
-        data.content = `The s block includes the alkali metals and alkaline earth metals. These are soft and reactive metals. The s block also contains hydrogen and helium, which are non-metals and gases. The elements of the s block have their valence electrons in s orbitals. The s sub-shell can contain a maximum of two electrons. This explains why the block is two columns wide.`;
+        data.content = `The s block includes the alkali metals and alkaline earth metals. These are soft and reactive metals. The s block also contains hydrogen and helium, which are non-metals and gases. The elements of the s block have their valence electrons in s orbitals. The s sub-shell can contain a maximum of two electrons: and is why the block is two columns wide.`;
         break;
       
       case 'p':
